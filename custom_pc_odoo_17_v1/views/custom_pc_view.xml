@@ -1,0 +1,57 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Custom PC Form View -->
+        <record id="view_custom_pc_form" model="ir.ui.view">
+            <field name="name">custom.pc.form</field>
+            <field name="model">custom_pc</field>
+            <field name="arch" type="xml">
+                <form string="Custom PC">
+                    <sheet>
+                        <group>
+                            <field name="product_catalog"/>
+                            <field name="dynamic_pricing"/>
+                            <field name="compatibility_checker"/>
+                            <field name="customization_options"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Custom PC Tree View -->
+        <record id="view_custom_pc_tree" model="ir.ui.view">
+            <field name="name">custom.pc.tree</field>
+            <field name="model">custom_pc</field>
+            <field name="arch" type="xml">
+                <tree string="Custom PC">
+                    <field name="product_catalog"/>
+                    <field name="dynamic_pricing"/>
+                    <field name="compatibility_checker"/>
+                    <field name="customization_options"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Custom PC Action -->
+        <record id="action_custom_pc" model="ir.actions.act_window">
+            <field name="name">Custom PC</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">custom_pc</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Custom PC
+                </p>
+                <p>
+                    Here, you can create and manage your custom PCs.
+                </p>
+            </field>
+        </record>
+
+        <!-- Custom PC Menu -->
+        <menuitem id="menu_custom_pc" name="Custom PC" action="action_custom_pc"/>
+    </data>
+</odoo>
+```

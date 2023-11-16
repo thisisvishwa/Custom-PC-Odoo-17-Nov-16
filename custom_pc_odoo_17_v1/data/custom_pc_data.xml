@@ -1,0 +1,41 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Product Catalog Data -->
+        <record id="product_cpu" model="product.template">
+            <field name="name">CPU</field>
+            <field name="list_price">200.00</field>
+        </record>
+        <record id="product_gpu" model="product.template">
+            <field name="name">GPU</field>
+            <field name="list_price">400.00</field>
+        </record>
+        <record id="product_ram" model="product.template">
+            <field name="name">RAM</field>
+            <field name="list_price">100.00</field>
+        </record>
+        <record id="product_ssd" model="product.template">
+            <field name="name">SSD</field>
+            <field name="list_price">150.00</field>
+        </record>
+        <!-- Customization Options Data -->
+        <record id="custom_color_red" model="custom_pc.customization_options">
+            <field name="name">Red</field>
+            <field name="type">Color</field>
+        </record>
+        <record id="custom_color_blue" model="custom_pc.customization_options">
+            <field name="name">Blue</field>
+            <field name="type">Color</field>
+        </record>
+        <record id="custom_led_white" model="custom_pc.customization_options">
+            <field name="name">White</field>
+            <field name="type">LED</field>
+        </record>
+        <record id="custom_led_rgb" model="custom_pc.customization_options">
+            <field name="name">RGB</field>
+            <field name="type">LED</field>
+        </record>
+    </data>
+</odoo>
+```
